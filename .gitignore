@@ -1,0 +1,7 @@
+*.swp
+*.git-shortcuts
+*.pyc
+bin/
+local_*
+*.temp
+*.temp.*
