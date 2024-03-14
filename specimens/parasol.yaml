@@ -1,5 +1,5 @@
 name:
-  binomial: macrolepiota ...
+  binomial: macrolepiota procera
   common: parasol
   distribution: @europe, @northamerica
 features: @cap, @step, @gills
@@ -9,20 +9,22 @@ notes:
   - title: Warning
     notes: In North America, there is a gren-gilled variety that is somewhat toxic.
 links:
-- https://...
-- https://...
+- https://www.youtube.com/watch?v=xK87iMP4GMI
+images:
+- link1
+- link2 ...
 
 stages:
 - name: developing
   sources:
-  - @=sources/books.yaml:rogerp/mushrooms/124
-  - @=sources/web.yaml:wildfooduk/site/parasol
+  - @source/rogerp-m ; page 124
   basics:
     cap: @clr/white, @tx/scaly
     gills: @gil/adnate, @gil/crowded, @clr/white, @clr/cream
     stem: @firm, @clr/white, @tx/scaly
     ecology: @saprot
     spores: n/a
+  images: ...
   confusions:
     - name: young death cap
       ref:  ./death-cap#young # reference a local file, and a specific stage
@@ -31,14 +33,14 @@ stages:
 
 - name: full
   sources:
-  - @=sources/books.yaml:rogerp/mushrooms/124
-  - @=sources/web.yaml:wildfooduk/site/parasol
+  - @rogerp-m  ; page 124
   basics:
     cap: @clr/white, @tx/scaly
     gills: @gil/adnate, @gil/crowded, @clr/white, @clr/cream
     stem: @firm, @clr/white, @tx/scaly
     ecology: @saprot
     spores: n/a
+  images: ...
   confusions:
     - name: green-gilled parasol
       ref: https://... # URI

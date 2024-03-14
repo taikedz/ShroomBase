@@ -1,18 +1,22 @@
 # Aliases for longer text, and also for unified reference.
-#
-# Empty entries will simply receive the title itself as data
+
+# Items strarting `@=` specify a YAML file and descend the keys from there.
+#    the content is then replaced in-place.
 
 # The data here will be imported and inserted in-place.
 @=data/families.yaml
 @=data/distribution.yaml
+@=data/sources.yaml
 
 # Unqualified aliaeses - something like "@nice" has no qualifier, and
 #  will be looked up here
 _:
   firm:
 
+# Empty entries will simply receive the title itself as data
 features:
   body:
+    # Empty. During initial resolution of the alias file, its content will become "cap"
     cap:
     stem:
     bracket:

@@ -1,7 +1,5 @@
 # Example entry file for a given shroom
 # Items starting `@` are references that can be looked up from the "aliases.yaml" file
-# Items strarting `@=` specify a YAML file and descend the keys from there.
-#    the content is then replaced in-place.
 # Individual "notes" and "stages" entry can have a "sources" section
 #   sources can be literal, or aliases, though one-off sources are discouraged.
 #   Reference an authoritative source in a file for re-use.
@@ -12,6 +10,7 @@ name:
   binomial: pleurotus ostreatus
   common: osyster mushroom
   distribution: @asia, @europe, @northamerica
+  image: # path or URL - try to only reference authoritative or uncontestable depections
 features: @cap, @step, @gills
 notes:
   # In-order list of informational panels for display
@@ -19,6 +18,18 @@ notes:
     notes: grows on dead wood of deciduous trees, all year round except in frost
   - title: Interesting Facts
     notes: very tasty
+links:
+# URLs to user photos, videos, interesting pages, etc
+# Non-authoritative information can live here.
+- https://...
+- https://...
+
+images:
+  # It is highly advised to _not_ provide illustration photos unless you are certain that the
+  # photographed item is indeed the right shroom. BEWARE of user forums, they are RIDDLED with
+  # false identifications.
+  - ./path/...
+  - https://...
 
 # Stages is where we add some core identification
 # Recommended ordering is earliest to latest
@@ -26,16 +37,12 @@ stages:
 - name: overall
   sources:
   # Prefer authoritative sources here
-  - @=sources/books.yaml:rogerp/mushrooms/123
-  - @=sources/web.yaml:wildfooduk/site/oysters
+  - @source/rogerp-m ; page 123
   basics:
     cap: @clr/grey, @tx/smooth
     gills: @gil/decurrent, @gil/crowded, @clr/white, @clr/cream
     stem: @firm, @clr/white, @tx/smooth
     ecology: @saprob
     spores: n/a
-  links:
-  # URLs to photos, vidoes, interesting pages, etc
-  # Non-authoritative information can live here.
-  - https://...
-  - https://...
+  images:
+  - link # path, link, etc ...

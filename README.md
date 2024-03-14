@@ -1,6 +1,6 @@
-# ShroomBase
+# GrowBase
 
-Easily track data about fungi (and plants, why not), and build a searchable static site from the data.
+Easily track data about plants and fungi, and build a searchable static site from the data.
 
 * built site is static and hostable on free-tier site hosting
 * no database engines required
@@ -15,9 +15,7 @@ Please ensure you run the pre-commit scripts for verifying scripts.
 
 ## Developer's notes
 
-The key goal here is to document what I am learning about mushrooms, and breaking down the information structurally so that it can be searched.
-
-The example data that I collect will no doubt be for UK mushrooms specifically, as that is my interest.
+The key goal here is to document what I am learning about mushrooms, and breaking down the information structurally so that it can be searched. The example data that I collect will no doubt be for UK mushrooms specifically, as that is my interest.
 
 However, the site-build engine itself will remain data-agnostic: the format will intend to be well-defined, whereas the specific information on each specimen/species remains distinct.
 
