@@ -27,7 +27,7 @@ stages:
     - name: young death cap
       ref:  ./death-cap#young # reference a local file, and a specific stage
     - name: young amanitas in general
-      ref: @#amanita # list all files that use this tag somewhere
+      ref: @@amanita # list all specimens that use this alias
 
 - name: full
   sources:
