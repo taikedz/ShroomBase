@@ -1,0 +1,46 @@
+name:
+  binomial: macrolepiota ...
+  common: parasol
+  distribution: @europe, @northamerica
+features: @cap, @step, @gills
+notes:
+  - title: Summary
+    notes: grows in grass, is fairly tall
+  - title: Warning
+    notes: In North America, there is a gren-gilled variety that is somewhat toxic.
+links:
+- https://...
+- https://...
+
+stages:
+- name: developing
+  sources:
+  - @=sources/books.yaml:rogerp/mushrooms/124
+  - @=sources/web.yaml:wildfooduk/site/parasol
+  basics:
+    cap: @clr/white, @tx/scaly
+    gills: @gil/adnate, @gil/crowded, @clr/white, @clr/cream
+    stem: @firm, @clr/white, @tx/scaly
+    ecology: @saprot
+    spores: n/a
+  confusions:
+    - name: young death cap
+      ref:  ./death-cap#young # reference a local file, and a specific stage
+    - name: young amanitas in general
+      ref: @#amanita # list all files that use this tag somewhere
+
+- name: full
+  sources:
+  - @=sources/books.yaml:rogerp/mushrooms/124
+  - @=sources/web.yaml:wildfooduk/site/parasol
+  basics:
+    cap: @clr/white, @tx/scaly
+    gills: @gil/adnate, @gil/crowded, @clr/white, @clr/cream
+    stem: @firm, @clr/white, @tx/scaly
+    ecology: @saprot
+    spores: n/a
+  confusions:
+    - name: green-gilled parasol
+      ref: https://... # URI
+    - name: slender parasol
+      ref: ./slender-parasol # './': file name, without extension

@@ -1,0 +1,63 @@
+# Aliases for longer text, and also for unified reference.
+#
+# Empty entries will simply receive the title itself as data
+
+# The data here will be imported and inserted in-place.
+@=data/families.yaml
+@=data/distribution.yaml
+
+# Unqualified aliaeses - something like "@nice" has no qualifier, and
+#  will be looked up here
+_:
+  firm:
+
+features:
+  body:
+    cap:
+    stem:
+    bracket:
+    club:
+    other:
+
+  mycete: # rename to express "spores organ"
+    gills:
+    pores:
+    teeth:
+    gastrum: # rename ?
+
+
+clr:
+  white:
+  cream:
+  pink:
+  yellow:
+  brown:
+
+
+cat:
+  lbm: little brown mushroom
+
+
+eco:
+  saprob: sarpobic
+  saprot: saprotrophic
+  parasit: parasitic
+
+
+tx:
+  smooth:
+  scaly:
+
+
+pore:
+  smooth:
+  porous:
+  maze:
+
+
+gil:
+  crowded:
+  decurrent:
+  adnate:
+  adnexed:
+  free:
