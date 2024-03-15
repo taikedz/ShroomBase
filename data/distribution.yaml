@@ -1,12 +1,11 @@
-distribution:
-  asia: Asia
-  europe: Europe
-  northam: North America
-  southam: South America
-  centram: Central America
-  africa: Africa
-  oceania: Oceania
+asia: Asia
+europe: Europe
+northam: North America
+southam: South America
+centram: Central America
+africa: Africa
+oceania: Oceania
 
-  temperate:
-  tropical:
+temperate:
+tropical:
 

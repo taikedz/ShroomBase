@@ -4,9 +4,9 @@
 #    the content is then replaced in-place.
 
 # The data here will be imported and inserted in-place.
-@=data/families.yaml
-@=data/distribution.yaml
-@=data/sources.yaml
+fam: @=data/families.yaml
+distribution: @=data/distribution.yaml
+source: @=data/sources.yaml
 
 # Unqualified aliaeses - something like "@nice" has no qualifier, and
 #  will be looked up here
