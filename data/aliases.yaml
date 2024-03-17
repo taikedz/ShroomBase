@@ -5,7 +5,7 @@
 
 # The data here will be imported and inserted in-place.
 fam: $=data/families.yaml
-distribution: $=data/distribution.yaml
+dis: $=data/distribution.yaml
 source: $=data/sources.yaml
 
 # Unqualified aliaeses - something like "@nice" has no qualifier, and
