@@ -1,6 +1,6 @@
-# GrowBase
+# ShroomBase
 
-Easily track data about plants and fungi, and build a searchable static site from the data.
+Easily track data about fungi, and build a searchable static site from the data.
 
 * built site is static and hostable on free-tier site hosting
 * no database engines required
@@ -11,7 +11,7 @@ Easily track data about plants and fungi, and build a searchable static site fro
 
 Please feel free to contribute to the code, however because identification can be quite personal, I will not be taking contributions to the specimen section.
 
-Please ensure you run the pre-commit scripts for verifying scripts.
+Please ensure you run the pre-commit scripts for verifying site-build code.
 
 ## Developer's notes
 
