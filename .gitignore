@@ -5,3 +5,4 @@ bin/
 local_*
 *.temp
 *.temp.*
+node_modules/
