@@ -1,8 +1,8 @@
 name:
   binomial: macrolepiota procera
   common: parasol
-  distribution: @europe, @northamerica
-features: @cap, @step, @gills
+  distribution: $europe, $northamerica
+features: $cap, $step, $gills
 notes:
   - title: Summary
     notes: grows in grass, is fairly tall
@@ -17,28 +17,28 @@ images:
 stages:
 - name: developing
   sources:
-  - @source/rogerp-m ; page 124
+  - $source/rogerp-m ; page 124
   basics:
-    cap: @clr/white, @tx/scaly
-    gills: @gil/adnate, @gil/crowded, @clr/white, @clr/cream
-    stem: @firm, @clr/white, @tx/scaly
-    ecology: @saprot
+    cap: $clr/white, $tx/scaly
+    gills: $gil/adnate, $gil/crowded, $clr/white, $clr/cream
+    stem: $firm, $clr/white, $tx/scaly
+    ecology: $saprot
     spores: n/a
   images: ...
   confusions:
     - name: young death cap
       ref:  ./death-cap#young # reference a local file, and a specific stage
     - name: young amanitas in general
-      ref: @@amanita # list all specimens that use this alias
+      ref: $$amanita # list all specimens that use this alias
 
 - name: full
   sources:
-  - @rogerp-m  ; page 124
+  - $rogerp-m  ; page 124
   basics:
-    cap: @clr/white, @tx/scaly
-    gills: @gil/adnate, @gil/crowded, @clr/white, @clr/cream
-    stem: @firm, @clr/white, @tx/scaly
-    ecology: @saprot
+    cap: [ $clr/white, $tx/scaly ]
+    gills: $gil/adnate, $gil/crowded, $clr/white, $clr/cream
+    stem: $firm, $clr/white, $tx/scaly
+    ecology: $saprot
     spores: n/a
   images: ...
   confusions:

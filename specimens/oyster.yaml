@@ -1,5 +1,5 @@
 # Example entry file for a given shroom
-# Items starting `@` are references that can be looked up from the "aliases.yaml" file
+# Items starting `$` are references that can be looked up from the "aliases.yaml" file
 # Individual "notes" and "stages" entry can have a "sources" section
 #   sources can be literal, or aliases, though one-off sources are discouraged.
 #   Reference an authoritative source in a file for re-use.
@@ -9,9 +9,9 @@
 name:
   binomial: pleurotus ostreatus
   common: osyster mushroom
-  distribution: @asia, @europe, @northamerica
+  distribution: $asia, $europe, $northamerica
   image: # path or URL - try to only reference authoritative or uncontestable depections
-features: @cap, @step, @gills
+features: $cap, $step, $gills
 notes:
   # In-order list of informational panels for display
   - title: Summary
@@ -37,12 +37,12 @@ stages:
 - name: overall
   sources:
   # Prefer authoritative sources here
-  - @source/rogerp-m ; page 123
+  - $source/rogerp-m ; page 123
   basics:
-    cap: @clr/grey, @tx/smooth
-    gills: @gil/decurrent, @gil/crowded, @clr/white, @clr/cream
-    stem: @firm, @clr/white, @tx/smooth
-    ecology: @saprob
+    cap: $clr/grey, $tx/smooth
+    gills: $gil/decurrent, $gil/crowded, $clr/white, $clr/cream
+    stem: $firm, $clr/white, $tx/smooth
+    ecology: $saprob
     spores: n/a
   images:
   - link # path, link, etc ...
