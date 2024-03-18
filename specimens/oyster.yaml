@@ -39,7 +39,7 @@ stages:
 - name: overall
   sources:
   # Prefer authoritative sources here
-  - $source/rogerp-m ; page 123
+  - $source/rogerp-m ; page 266
   basics:
     cap: $clr/grey, $tx/smooth
     gills: $gil/decurrent, $gil/crowded, $clr/white, $clr/cream

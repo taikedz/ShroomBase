@@ -19,7 +19,7 @@ images:
 stages:
 - name: developing
   sources:
-  - $source/rogerp-m ; page 124
+  - $source/rogerp-m ; page 127
   basics:
     cap: $clr/white, $tx/scaly
     gills: $gil/adnate, $gil/crowded, $clr/white, $clr/cream
@@ -34,7 +34,7 @@ stages:
 
 - name: full
   sources:
-  - $source/rogerp-m  ; page 124
+  - $source/rogerp-m  ; page 127
   basics:
     cap: $clr/white, $tx/scaly
     gills: $gil/adnate, $gil/crowded, $clr/white, $clr/cream
