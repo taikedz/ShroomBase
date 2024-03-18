@@ -8,26 +8,21 @@ fam: $=data/families.yaml
 dis: $=data/distribution.yaml
 source: $=data/sources.yaml
 
-# Unqualified aliaeses - something like "@nice" has no qualifier, and
+# Unqualified aliaeses - something like "$nice" has no qualifier, and
 #  will be looked up here
-_:
-  firm:
+firm:
 
 # Empty entries will simply receive the title itself as data
-features:
-  body:
-    # Empty. During initial resolution of the alias file, its content will become "cap"
-    cap:
-    stem:
-    bracket:
-    club:
-    other:
-
-  mycete: # rename to express "spores organ"
-    gills:
-    pores:
-    teeth:
-    gastrum: # rename ?
+ft:
+  # Empty. During initial resolution of the alias file, its content will become "cap"
+  cap:
+  stipe:
+  bracket:
+  club:
+  gills:
+  pores:
+  teeth:
+  gastrum: # rename ?
 
 
 clr:
@@ -36,6 +31,7 @@ clr:
   pink:
   yellow:
   brown:
+  grey:
 
 
 cat:
@@ -43,7 +39,6 @@ cat:
 
 
 eco:
-  saprob: sarpobic
   saprot: saprotrophic
   parasit: parasitic
 

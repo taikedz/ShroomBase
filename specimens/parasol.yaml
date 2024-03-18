@@ -1,8 +1,10 @@
 name:
   binomial: macrolepiota procera
   common: parasol
-  distribution: [$dis/europe, $dis/northamerica]
-features: [$cap, $step, $gills]
+features:
+  distribution: $dis/europe, $dis/northam
+  form: $ft/cap, $ft/stipe, $ft/gills
+  ecology: $eco/saprot
 notes:
   - title: Summary
     notes: grows in grass, is fairly tall
@@ -20,9 +22,8 @@ stages:
   - $source/rogerp-m ; page 124
   basics:
     cap: $clr/white, $tx/scaly
-    gills: [$gil/adnate, $gil/crowded, $clr/white, $clr/cream]
-    stem: [$firm, $clr/white, $tx/scaly]
-    ecology: $saprot
+    gills: $gil/adnate, $gil/crowded, $clr/white, $clr/cream
+    stem: $firm, $clr/white, $tx/scaly
     spores: n/a
   images: ...
   confusions:
@@ -33,12 +34,11 @@ stages:
 
 - name: full
   sources:
-  - $rogerp-m  ; page 124
+  - $source/rogerp-m  ; page 124
   basics:
-    cap: [ $clr/white, $tx/scaly ]
-    gills: [$gil/adnate, $gil/crowded, $clr/white, $clr/cream]
-    stem: [$firm, $clr/white, $tx/scaly]
-    ecology: $saprot
+    cap: $clr/white, $tx/scaly
+    gills: $gil/adnate, $gil/crowded, $clr/white, $clr/cream
+    stem: $firm, $clr/white, $tx/scaly
     spores: n/a
   images: ...
   confusions:

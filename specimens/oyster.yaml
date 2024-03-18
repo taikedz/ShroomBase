@@ -9,9 +9,11 @@
 name:
   binomial: pleurotus ostreatus
   common: osyster mushroom
-  distribution: $asia, $europe, $northamerica
   image: # path or URL - try to only reference authoritative or uncontestable depections
-features: $cap, $step, $gills
+features:
+  distribution: $dis/asia, $dis/europe, $dis/northam
+  form: $ft/cap, $ft/stipe, $ft/gills
+  ecology: $eco/saprot
 notes:
   # In-order list of informational panels for display
   - title: Summary
@@ -42,7 +44,6 @@ stages:
     cap: $clr/grey, $tx/smooth
     gills: $gil/decurrent, $gil/crowded, $clr/white, $clr/cream
     stem: $firm, $clr/white, $tx/smooth
-    ecology: $saprob
     spores: n/a
   images:
   - link # path, link, etc ...
