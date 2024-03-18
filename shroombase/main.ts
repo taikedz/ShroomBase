@@ -1,11 +1,12 @@
 import * as resolveyaml from './resolveyaml.ts';
+import * as fsutil from './fsutil.ts';
 
-var ALL_ALIAS = null;
-
-function deepLog(thing) { console.log(thing, false, null, true) }
+function deepLog(thing) { console.dir(thing, {depth:null}) }
 
 resolveyaml.loadAliasYaml('data/aliases.yaml')
 
-let parasol = resolveyaml.loadSpecimenYaml('specimens/parasol.yaml')
-deepLog(parasol)
+for ( const path of fsutil.walkdir('/hostdata/specimens', [".yaml"]) ) {
+    console.log(`====== ${path} =====`)
+    deepLog( resolveyaml.loadSpecimenYaml(path) )
+}
 

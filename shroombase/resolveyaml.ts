@@ -4,6 +4,7 @@ import * as traverse from './traverse.ts'
 
 
 var ALL_ALIAS = null;
+const ALIAS_PAT = new RegExp('\\$[a-zA-Z0-9_/-]+', 'g');
 
 
 function loadYaml(path) {
@@ -12,9 +13,8 @@ function loadYaml(path) {
 }
 
 export function loadAliasYaml(path) {
-    let data = loadYaml(path);
-    resolveYamlAliases(data);
-    return data;
+    ALL_ALIAS = loadYaml(path);
+    resolveYamlAliases(ALL_ALIAS);
 }
 
 export function loadSpecimenYaml(path) {
@@ -30,19 +30,17 @@ function istype(obj, typestr) {
 
 
 function resolveYamlAliases(data_tree) {
-    // FIXME - ALL_ALIAS still undefined here
-    ALL_ALIAS = _resolveYamlAliases(data_tree);
-}
-
-function _resolveYamlAliases(data_tree) {
     for(let key in data_tree) {
         let value = data_tree[key];
 
         if (value == null) { data_tree[key] = key; }
 
-        else if (istype(value, 'string') && value.startsWith("$=")) { loadAliasYaml(value.substring(2)); }
+        else if (istype(value, 'string') && value.startsWith("$=")) {
+            data_tree[key] = loadYaml(value.substring(2))
+            resolveYamlAliases(data_tree[key]);
+        }
 
-        else if (istype(value, 'object')) { _resolveYamlAliases(value); }
+        else if (istype(value, 'object')) { resolveYamlAliases(value); }
     }
 }
 
@@ -53,8 +51,17 @@ function resolveYamlSpecimens(data_tree) {
 
         if (value == null) { data_tree[key] = "(unspecified)"; }
 
-        else if (istype(value, 'string') && value.startsWith("$"))
-            data_tree[key] = resolveAlias(value.substring(1));
+        else if (istype(value, 'string')) {
+            let aliases = value.matchAll(ALIAS_PAT)
+
+            for(const alias of aliases) {
+                let alias_str = alias[0]
+                let sub = resolveAlias(alias_str.substring(1))
+                if (sub === undefined) sub = alias_str
+                value = value.replace(alias_str, sub)
+            }
+            data_tree[key] = value
+        }
 
         else if (istype(value, 'object')) { resolveYamlSpecimens(value); }
     }
@@ -63,7 +70,6 @@ function resolveYamlSpecimens(data_tree) {
 
 function resolveAlias(alias) {
     let tokens = alias.split("/");
-    // FIXME - ALL_ALIAS still undefined here
     return traverse.descend(ALL_ALIAS, tokens)
 }
 
