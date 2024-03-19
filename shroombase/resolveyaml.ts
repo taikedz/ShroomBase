@@ -20,6 +20,9 @@ export function loadAliasYaml(path) {
 export function loadSpecimenYaml(path) {
     let data = loadYaml(path);
     resolveYamlSpecimens(data);
+    // TODO - change this to return the data, along with a list of
+    //   all aliases resolved in the file. Use those to build the alias lookup
+    //   (also return non-resolved aliases for separate reporting)
     return data;
 }
 
