@@ -5,7 +5,7 @@ function deepLog(thing) { console.dir(thing, {depth:null}) }
 
 resolveyaml.loadAliasYaml('data/aliases.yaml')
 
-for ( const path of fsutil.walkdir('/hostdata/specimens', [".yaml"]) ) {
+for ( const path of fsutil.walkdir('./data/specimens', [".yaml"]) ) {
     console.log(`====== ${path} =====`)
     deepLog( resolveyaml.loadSpecimenYaml(path) )
 }
