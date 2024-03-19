@@ -1,9 +1,8 @@
 import * as fs from 'fs'
 import * as yaml from 'js-yaml'
-import * as traverse from './traverse.ts'
+import * as aliaslib from './aliaslib.ts'
 
 
-var ALL_ALIAS = null;
 const ALIAS_PAT = new RegExp('\\$[a-zA-Z0-9_/-]+', 'g');
 
 
@@ -13,8 +12,9 @@ function loadYaml(path) {
 }
 
 export function loadAliasYaml(path) {
-    ALL_ALIAS = loadYaml(path);
-    resolveYamlAliases(ALL_ALIAS);
+    let data = loadYaml(path);
+    resolveYamlAliases(data);
+    aliaslib.registerAliases(data);
 }
 
 export function loadSpecimenYaml(path) {
@@ -56,7 +56,7 @@ function resolveYamlSpecimens(data_tree) {
 
             for(const alias of aliases) {
                 let alias_str = alias[0]
-                let sub = resolveAlias(alias_str.substring(1))
+                let sub = aliaslib.resolveAlias(alias_str.substring(1))
                 if (sub === undefined) sub = alias_str
                 value = value.replace(alias_str, sub)
             }
@@ -65,11 +65,5 @@ function resolveYamlSpecimens(data_tree) {
 
         else if (istype(value, 'object')) { resolveYamlSpecimens(value); }
     }
-}
-
-
-function resolveAlias(alias) {
-    let tokens = alias.split("/");
-    return traverse.descend(ALL_ALIAS, tokens)
 }
 
